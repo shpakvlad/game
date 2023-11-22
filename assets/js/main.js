@@ -5,6 +5,7 @@ let nogameMsg = document.querySelector("#nogame-msg");
 let game = new Game();
 let trying = 0;
 let gameTime = 0;
+let gameTimer = null;
 
 nogameBtn.addEventListener("click", () => {
     nogameMsg.classList.remove("hide");
@@ -20,7 +21,7 @@ gameBtn.addEventListener("click", () => {
     gameBlock.classList.remove("hide");
     nogameMsg.classList.add("hide");
 
-    setInterval(() => {
+    gameTimer = setInterval(() => {
         gameTime++
     }, 1000);
 });
@@ -35,7 +36,7 @@ let reportMsg = document.querySelector("#report-msg");
 let tryMsg = document.querySelector("#try");
 let timeMsg = document.querySelector("#time");
 
-userAnswerBtn.addEventListener("click", () => {
+userAnswerBtn.addEventListener("click", () => {    
     checkResult = game.checkAnswer(userAnswer.value);
 
     trying++;
@@ -43,8 +44,7 @@ userAnswerBtn.addEventListener("click", () => {
     if(checkResult > 0) {
         greatteMsg.classList.remove("hide");
         closeMsgBox(greatteMsg);
-    } 
-    else if (checkResult == 0){
+    } else if (checkResult == 0){
         winMsg.classList.remove("hide");
 
         gameBlock.classList.add("hide");
@@ -53,6 +53,8 @@ userAnswerBtn.addEventListener("click", () => {
         timeMsg.innerHTML = `Прошло времени : ${gameTime} сек.`;
         
         reportMsg.classList.remove("hide");
+        
+        clearInterval(gameTimer);
 
     } else if (checkResult < 0) {
         lessMsg.classList.remove("hide");
@@ -80,3 +82,5 @@ function closeMsgBox(msgbox, time = 3000) {
         msgbox.classList.add("hide");
     }, time);
 }
+
+
