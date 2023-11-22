@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 25px/35px Georgia, "Times New Roman", Times, serif;
+}
+
+header {
+    padding: 15px 0;
+    text-align: center;
+    background-color: rgb(38, 37, 37);
+}
+
+/************************************************/
+/*                   REUSABLE                   */
+/************************************************/
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+}
+
+button[type="button"] {
+    padding: 10px 40px;
+    font: 25px Georgia, "Times New Roman", Times, serif;
+    color: black;
+    background-color: orange;
+    border-radius: 200px;
+    border: none;
+    transition: background-color 0.4s;
+
+    &:hover {
+        background-color: orangered;
+    }
+}
+
+button[type="button"]:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px 100px;
+}
+
+.hide {
+    display: none;
+}
+/************************************************/
+/*                     GAME-RULES               */
+/************************************************/
+
+#game-rules p {
+    margin-bottom: 20px;
+}
+
+/************************************************/
+/*                     GAME                     */
+/************************************************/
+#game {
+    padding: 20px 100px;
+    font: 25px/35px Georgia, "Times New Roman", Times, serif;
+}
+
+#game input[type="number"] {
+    padding: 5px;
+    width: 100px;
+    margin-right: 20px;
+    font: 25px/35px Georgia, "Times New Roman", Times, serif;
+}
+
+.answer-box {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/************************************************/
+/*                     MSG                      */
+/************************************************/
+#win-msg  {
+    padding-top: 30px;
+    font-size: 35px;
+    color: rgb(10, 184, 10);
+    padding-bottom: 20px;
+}
+
+/************************************************/
+/*                RECOMENDATIONS                */
+/************************************************/
+#recomendations p {
+    padding: 20px 0;
+}
+
+/************************************************/
+/*                    REPORT                    */
+/************************************************/
+#report-msg p {
+    padding-bottom: 20px ;
+}
+
+/************************************************/
+/*                    FOOTER                    */
+/************************************************/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgb(38, 37, 37);
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+}

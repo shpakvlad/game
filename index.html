@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Guess number game</title>
+
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <header>
+            <h2>Угадай число, а не мелодию!</h2>
+        </header>
+
+        <main>
+            <section class="wrapper" id="game-rules">
+                <p>Как вы думаете ваша интуиция развита?</p>
+
+                <p>
+                    Если вы ответили Да, то предлагаю вам сыграть в игру "угадай
+                    число."
+                </p>
+
+                <p>
+                    Правила игры, я загадаю число от 0 до 100, вы должны
+                    отгадать это число за меньшее количество попыток и как можно
+                    скорее, я буду отсчитывать время.
+                </p>
+
+                <p>Начнем?</p>
+
+                <div class="button-box">
+                    <button id="game-btn" type="button">Да</button>
+                    <button id="nogame-btn" type="button">Нет</button>
+                </div>
+            </section>
+
+            <section class="wrapper hide" id="game">
+                <p>Отгадайте число от 0 до 100.</p>
+
+                <p>Не забудь, время идет!</p>
+
+                <div class="answer-box">
+                    <input id="user-answer" type="number" name="userAnswer"  />
+
+                    <button id="user-answer-btn" type="button">Ваш ответ</button>
+                </div>
+            </section>
+
+            <section class="wrapper recomendations">
+                <p class="hide" id="greatter-msg">
+                    Ваше число больше моего. Пробуйте еще раз!
+                </p>
+                <p class="hide" id="less-msg">
+                    Ваше число меньше моего. Думаю, вам не угадать!
+                </p>
+                <p class="hide" id="win-msg">
+                    Не может быть! Вы угадали! Поздравляю!
+                </p>
+                <p class="hide" id="nogame-msg">
+                    Надеюсь вы пожалеете! <br> Но для полного отказа вам прийдется закрыть страницу!
+                </p>
+
+                <div id="report-msg" class="hide">
+                    <p id="time"></p>
+                    <p id="try"></p>
+                    <button id="reset-game" type="button">С начала</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Shpakov Vladyslav 2023.</p>
+        </footer>
+
+        <script src="./assets/js/Game.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
